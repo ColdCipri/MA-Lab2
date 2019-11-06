@@ -17,17 +17,17 @@ class CustomAdapter(val medsList: ArrayList<Meds>) : RecyclerView.Adapter<Custom
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
         val meds: Meds = medsList[p1]
 
-        p0?.nameTextView?.text = meds.name
-        p0?.dataexpTextView?.text = meds.dataexp
-        p0?.piecesTextView?.text = meds.pieces.toString()
-        p0?.baseSubstTextView?.text = meds.baseSusbt
-        p0?.quantityBaseSubstTextView?.text = meds.quantityBaseSubst
-        p0?.descriptionTextView?.text = meds.descrption
+        p0.nameTextView.text = meds.name
+        p0.dataexpTextView.text = meds.dataexp
+        p0.piecesTextView.text = meds.pieces.toString()
+        p0.baseSubstTextView.text = meds.baseSusbt
+        p0.quantityBaseSubstTextView.text = meds.quantityBaseSubst
+        p0.descriptionTextView.text = meds.descrption
 
     }
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
-        val v = LayoutInflater.from(p0?.context).inflate(R.layout.list_layout, p0,false)
+        val v = LayoutInflater.from(p0.context).inflate(R.layout.list_layout, p0,false)
         return ViewHolder(v)
     }
 
